@@ -1,17 +1,18 @@
 #include <iostream>
 #include "PhoneBook.class.hpp"
+#include "InputHandler.class.hpp"
 
 int main() {
 	PhoneBook phoneBook;
-	
-	std::string input = "";
 
 	while (true) {
-		std::cin >> input;
+		std::string input = phoneBook.getInput("Enter command");
 		if (input.compare("ADD") == 0) {
 			phoneBook.addContact();
-		} else {
-
+		} else if (input.compare("SEARCH") == 0) {
+			phoneBook.searchContact();
+		} else if (input.compare("EXIT") == 0) {
+			break;
 		}
 	}
 	return 0;
