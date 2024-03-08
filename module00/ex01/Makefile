@@ -1,9 +1,9 @@
-NAME			= megaphone
+NAME			= phonebook
 
 CPP				= c++
 FLAGS			= -Wall -Wextra -Werror -std=c++98
 
-SRCS			= megaphone.cpp
+SRCS			= main.cpp PhoneBook.class.cpp Contact.class.cpp InputHandler.class.cpp
 OBJ_DIR		= obj/
 SRC_OBJS	= $(SRCS:=.o) 
 OBJS			= $(addprefix $(OBJ_DIR), $(SRC_OBJS))

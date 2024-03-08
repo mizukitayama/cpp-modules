@@ -15,6 +15,7 @@ class Contact : public InputHandler{
 		void	showContact( void ) const;
 		void	showDetailedContact( void ) const;
 		int		getIndex( void ) const;
+		bool	hasInitialized( void ) const;
 	private:
 		std::string _resizeStr( std::string str) const;
 		int	_index;

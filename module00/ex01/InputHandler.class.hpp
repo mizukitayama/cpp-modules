@@ -2,20 +2,12 @@
 # define INPUTHANDLER_CLASS_HPP
 #include <iostream>
 
+#define RED     "\033[31m"
+#define RESET   "\033[0m"
+
 class InputHandler {
 	public:
-		std::string	getInput( std::string prompt ) const {
-			std::string	input = "";
-			while (1) {
-				std::cout << prompt << ":" << std::endl;
-				std::getline(std::cin, input);
-				if (!input.empty()) {
-					return (input);
-				} else {
-					std::cout << "Invalid input, please try again." << std::endl;
-				}
-			}
-		}
+		std::string	getInput( std::string prompt ) const;
 };
 
 #endif
